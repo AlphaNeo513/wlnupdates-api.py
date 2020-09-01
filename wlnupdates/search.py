@@ -29,31 +29,27 @@ class Search:
         payload = {"mode": "search-advanced"}
         if name:
             payload['title-search-text'] = name
-        elif tag_category:
-            payload['tag-category'] = tag_category
-        elif genre_category:
-            payload['genre-category'] = genre_category
-        elif chapter_limits:
-            payload['chapter-limits'] = chapter_limits
-        elif series_type:
+        if series_type:
             payload['series-type'] = series_type
-        elif sort_mode:
+        if tag_category:
+            payload['tag-category'] = tag_category
+        if genre_category:
+            payload['genre-category'] = genre_category
+        if chapter_limits:
+            payload['chapter-limits'] = chapter_limits
+
+        if sort_mode:
             payload['sort-mode'] = sort_mode
         payload = json.dumps(payload)
-        print(str(payload))
+        response = requests.request("POST", self.url, headers=self.headers, data=str(payload))
+        json_data = response.json()
+        return json_data
+    
 
-
-
-
-        test = { 'mode' : 'search-advanced', 'series-type' : {'Translated' : 'included'}, 'tag-category' : { 'ability-steal' : 'included', 'virtual-reality' : 'excluded' }, 'sort-mode' : "update", 'chapter-limits' : [40, 0], }
-
-        
-
-
-        response = requests.request("POST", self.url, headers=self.headers, data="'"+json.dumps(test)+"'")
-        return response
     
 
 test = Search()
 
-print(test.search_advanced(series_type={'Translated' : 'included'}, tag_category={ 'ability-steal' : 'included', 'virtual-reality' : 'excluded' }))
+test.search_advanced(series_type={'Translated' : 'included'}, tag_category={ 'ability-steal' : 'included', 'virtual-reality' : 'excluded' })
+
+#test.test()
