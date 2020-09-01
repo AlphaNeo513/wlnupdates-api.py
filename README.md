@@ -19,7 +19,8 @@ Install via pip (recommended)
 ```Shell
 python3 -m pip install wlnupdates-api
 ```
-All functions in Wrapper only accepts ID
+## Wrapper
+All Wrapper functions only accepts ID as param
 Wrapper param | Value | Description
 ------------ | ------------- | -------------
 ID | String **(optional)** | ID for the novel/series you're requesting
@@ -33,6 +34,7 @@ data = Wrapper()
 print(data.get_series_data('3')
 
 ```
+## Search
 title_search param | Value | Description
 ------------ | ------------- | -------------
 name | String **(required)** | Name for the novel/series you're requesting
