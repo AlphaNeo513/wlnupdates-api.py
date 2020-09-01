@@ -6,7 +6,7 @@ payload = '{"id": 45094, "mode": "get-series-id"}'
 headers = {'Content-Type': 'application/json'}
 response = requests.request("POST", url, headers=headers, data = payload)
 json_data = response.json()
-class Request:
+class Wrapper:
     def __init__(self):
         self.headers = {'Content-Type': 'application/json'} 
         self.url = "https://www.wlnupdates.com/api" #API link
@@ -102,7 +102,7 @@ class Request:
 
 
 
-data = Request()
+data = Wrapper()
 
 
-pprint(data.get_group_data('01'))
+pprint(data.get_genre_data('3'))
