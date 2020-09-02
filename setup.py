@@ -19,6 +19,7 @@ setup(
     python_requires=">= 3.7",
     description='A simple API wrapper for wlnupdates',
     long_description=readme,
+    long_description_content_type="text/markdown",
     author='AlphaNeo',
     author_email='sewon360@gmail.com',
     license='MIT',

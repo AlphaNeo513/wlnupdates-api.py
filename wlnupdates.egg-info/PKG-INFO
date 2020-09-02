@@ -1,4 +1,4 @@
-Metadata-Version: 1.2
+Metadata-Version: 2.1
 Name: wlnupdates
 Version: 1.0.0
 Summary: A simple API wrapper for wlnupdates
@@ -71,3 +71,4 @@ Description: <!-- Source: https://github.com/MattIPv4/template/blob/master/READM
         
 Platform: UNKNOWN
 Requires-Python: >= 3.7
+Description-Content-Type: text/markdown
