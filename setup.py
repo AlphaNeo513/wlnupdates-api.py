@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name='wlnupdates',
-    version='1.0.1',
+    version='1.0.6',
     url = 'https://github.com/AlphaNeo513/wlnupdates-api.py',
     python_requires=">= 3.7",
     description='A simple API wrapper for wlnupdates',
@@ -15,5 +15,6 @@ setup(
     author='AlphaNeo',
     author_email='sewon360@gmail.com',
     license='MIT',
-     
+    packages=find_packages(),
+    install_requires=['']
 )
