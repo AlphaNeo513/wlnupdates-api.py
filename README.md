@@ -17,7 +17,7 @@
 Install via pip (recommended)
 
 ```Shell
-python3 -m pip install wlnupdates-api
+pip install wlnupdates
 ```
 ## Wrapper
 All Wrapper functions only accepts ID as param
