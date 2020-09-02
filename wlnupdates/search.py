@@ -48,8 +48,4 @@ class Search:
 
     
 
-test = Search()
 
-test.search_advanced(series_type={'Translated' : 'included'}, tag_category={ 'ability-steal' : 'included', 'virtual-reality' : 'excluded' })
-
-#test.test()
