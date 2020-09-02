@@ -1,11 +1,6 @@
 import requests
 from pprint import pprint
-url = "https://www.wlnupdates.com/api"
-payload = '{"id": 45094, "mode": "get-series-id"}'
-#payload = '{"title": "The Book Eating Magician", "mode": "search-title"}'
-headers = {'Content-Type': 'application/json'}
-response = requests.request("POST", url, headers=headers, data = payload)
-json_data = response.json()
+
 class Wrapper:
     def __init__(self):
         self.headers = {'Content-Type': 'application/json'} 
@@ -100,9 +95,3 @@ class Wrapper:
         else:
             return json_data
 
-
-
-data = Wrapper()
-
-
-pprint(data.get_genre_data('3'))
