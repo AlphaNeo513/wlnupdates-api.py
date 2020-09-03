@@ -27,7 +27,7 @@ ID | String **(optional)** | ID for the novel/series you're requesting
 
 
 ```Python
-from wlnupdates-api import Wrapper
+from wlnupdates import Wrapper
 
 data = Wrapper()
 
@@ -43,7 +43,7 @@ fullList | Boolean **(optional)** | If true, will output clean list with match(s
 
 ### Usage for Search
 ```Python
-from wlnupdates-api import Search
+from wlnupdates import Search
 
 data = Search()
 
